@@ -1,5 +1,5 @@
 Использованы библиотеки:
 -sys
--PyQt5
+-PyQt6
 -sqlite3
 -random
