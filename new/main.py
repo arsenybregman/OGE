@@ -47,6 +47,21 @@ class MyWidget(QMainWindow):
         self.back_button.clicked.connect(self.back_example)
         self.show_button.clicked.connect(self.list_show)
 
+    
+    def connect(self, type, table_name):
+        self.finder = choice()
+        con = sqlite3.connect('inf_oge.db')
+        kur = con.cursor()
+        line_1 = kur.execute("""SELECT  FROM number_1 WHERE id = ?""", self.finder).fetchall()
+        con.commit()
+        con.close()
+        if type == 'text':
+            self.example.setText(str(line_1[0][0]))
+        elif type == 'image':
+            line_2 = str(line_1[0][0])
+            self.pixmap = QPixmap(line_2)
+            self.example.setPixmap(self.pixmap)
+
     def run(self):
         self.test_button.setEnabled(False)
         self.list_button.setEnabled(False)
