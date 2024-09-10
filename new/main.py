@@ -1,9 +1,9 @@
 import sys
 import sqlite3
-from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QInputDialog
+from PyQt6 import uic
+from PyQt6.QtWidgets import QApplication, QMainWindow
+from PyQt6.QtGui import QPixmap
+from PyQt6.QtWidgets import QInputDialog
 from random import randint
 
 
