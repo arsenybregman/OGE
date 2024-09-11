@@ -52,7 +52,7 @@ class MyWidget(QMainWindow):
         self.finder = choice()
         con = sqlite3.connect('inf_oge.db')
         kur = con.cursor()
-        line_1 = kur.execute("""SELECT  FROM number_1 WHERE id = ?""", self.finder).fetchall()
+        line_1 = kur.execute(f"SELECT {type} FROM {table_name} WHERE id = ?", self.finder).fetchall()
         con.commit()
         con.close()
         if type == 'text':
